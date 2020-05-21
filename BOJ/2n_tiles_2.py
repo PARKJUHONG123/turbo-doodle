@@ -1,24 +1,16 @@
-#1 -> 1
-#2 -> 3
-#3 -> 5
-#4 -> 7
-#8 -> 171
-#12 -> 2731
+temp = int(input())
+n_arr = [0 for _ in range(temp + 1)]
 
-n = int(input())
+if (temp == 1):
+    n_arr[1] = 1
 
-d_arr = [0 for _ in range(n + 1)]
+elif (temp == 2):
+    n_arr[1] = 1
+    n_arr[2] = 3
 
-if (n == 1):
-    d_arr[1] = 1
-elif (n == 2):
-    d_arr[1] = 1
-    d_arr[2] = 3
 else:
-    d_arr[1] = 1
-    d_arr[2] = 3
-    minus = 1
-    for j in range(3, n + 1):
-        d_arr[j] = 2 * d_arr[j - 1] - minus
-        minus += 2
-print(d_arr)
+    n_arr[1] = 1
+    n_arr[2] = 3
+    for j in range(3, temp + 1):
+        n_arr[j] += n_arr[j-1] + 2 * n_arr[j-2]
+print(n_arr[-1] % 10007)
