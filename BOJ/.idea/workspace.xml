@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aed85f4-ea32-4532-b033-07b422084edf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2n_tiles_2.py" afterPath="$PROJECT_DIR$/2n_tiles_2.py" />
-    </list>
+    <list default="true" id="1aed85f4-ea32-4532-b033-07b422084edf" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,16 +25,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="climb_stairs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/climb_stairs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2n_tiles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2n_tiles.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2n_tiles_2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2n_tiles_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2n_tiles_2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -57,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="int_triangle.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/int_triangle.py">
+      <file leaf-file-name="padovan_sequence.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/padovan_sequence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="135">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buying_card.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buying_card.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -141,12 +139,14 @@
         <option value="$PROJECT_DIR$/stair_number.py" />
         <option value="$PROJECT_DIR$/longest_increase.py" />
         <option value="$PROJECT_DIR$/2n_tiles_2.py" />
+        <option value="$PROJECT_DIR$/padovan_sequence.py" />
+        <option value="$PROJECT_DIR$/buying_card.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="53" />
+    <option name="x" value="242" />
+    <option name="y" value="125" />
     <option name="width" value="1400" />
     <option name="height" value="757" />
   </component>
@@ -189,41 +189,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.2n_tiles_2">
-    <configuration default="false" name="wine" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="BOJ" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wine.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="continuous_add" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="BOJ" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/continuous_add.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.buying_card">
     <configuration default="false" name="stair_number" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -271,6 +237,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BOJ" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2n_tiles_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="padovan_sequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BOJ" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/padovan_sequence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="buying_card" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BOJ" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buying_card.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -410,19 +410,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.wine" />
-      <item index="1" class="java.lang.String" itemvalue="Python.continuous_add" />
-      <item index="2" class="java.lang.String" itemvalue="Python.stair_number" />
-      <item index="3" class="java.lang.String" itemvalue="Python.longest_increase" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2n_tiles_2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.stair_number" />
+      <item index="1" class="java.lang.String" itemvalue="Python.longest_increase" />
+      <item index="2" class="java.lang.String" itemvalue="Python.2n_tiles_2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.padovan_sequence" />
+      <item index="4" class="java.lang.String" itemvalue="Python.buying_card" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2n_tiles_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.longest_increase" />
-        <item index="2" class="java.lang.String" itemvalue="Python.stair_number" />
-        <item index="3" class="java.lang.String" itemvalue="Python.continuous_add" />
-        <item index="4" class="java.lang.String" itemvalue="Python.wine" />
+        <item index="0" class="java.lang.String" itemvalue="Python.buying_card" />
+        <item index="1" class="java.lang.String" itemvalue="Python.padovan_sequence" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2n_tiles_2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.longest_increase" />
+        <item index="4" class="java.lang.String" itemvalue="Python.stair_number" />
       </list>
     </recent_temporary>
   </component>
@@ -440,7 +440,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="53" width="1400" height="757" extended-state="0" />
+    <frame x="242" y="125" width="1400" height="757" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -563,6 +563,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/padovan_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buying_card.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="15" />
           <folding />
         </state>
       </provider>
