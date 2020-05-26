@@ -35,4 +35,4 @@ for i in range(n):
         max_length = len(d_arr[i])
 
 print(n - max_length)
-
+print(d_arr)
