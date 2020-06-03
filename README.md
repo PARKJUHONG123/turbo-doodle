@@ -1,2 +1,2 @@
 # turbo-doodle
-all problems from "https://programmers.co.kr"
+all problems from Programmers and Baekjoon Online Judge
