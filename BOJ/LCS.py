@@ -9,4 +9,5 @@ for i in range(1, len(str1) + 1):
         else :
             d_arr[i][j] = max(d_arr[i - 1][j], d_arr[i][j - 1])
 
-print(d_arr[-1][-1])
+for i in range(len(str1) + 1):
+    print(d_arr[i])
