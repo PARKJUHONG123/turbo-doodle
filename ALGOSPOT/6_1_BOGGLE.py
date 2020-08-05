@@ -46,6 +46,3 @@ for _ in range(C):
             if early_break == True:
                 break
         print(test_word, early_break)
-
-#import os
-#os.system("pause")    

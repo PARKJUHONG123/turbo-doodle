@@ -39,8 +39,8 @@ def brute_force(current_clock, switch_index):
         return inf
 
     ret = inf
-    for clock_count in range(clockwise):
-        ret = min(ret, clock_count + brute_force(current_clock, switch_index + 1))
+    for push_count in range(clockwise):
+        ret = min(ret, push_count + brute_force(current_clock, switch_index + 1))
         push(current_clock, switch_index)
     return ret
 
