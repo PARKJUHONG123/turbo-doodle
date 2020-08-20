@@ -27,3 +27,5 @@ for i in range(n):
     tri[i] = list(map(int, file.readline().split()))
 
 print(search(0, 0))
+print(tri)
+print(cache)

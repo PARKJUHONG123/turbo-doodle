@@ -7,10 +7,18 @@ Created on Thu Aug 20 18:46:37 2020
 
 n = int(input())
 
-cache = [0 for _ in range(n)]
-cache[0] = 1
-cache[1] = 2
-for i in range(2, n):
-    cache[i] = cache[i - 1] + cache[i - 2]
+MOD = 1000000007
+cache = [-1 for _ in range(n + 1)]
 
-print(cache[-1])
+def tile(width):
+    if width <= 1:
+        return 1
+    ret = cache[width]
+    if ret != -1:
+        return ret
+
+    ret = (tile(width - 2) + tile(width - 1)) % MOD
+    cache[width] = ret
+    return ret
+
+print(tile(n))
