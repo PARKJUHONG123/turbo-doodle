@@ -8,13 +8,14 @@ Created on Mon Aug 24 18:46:16 2020
 file = open("9_2_input.txt", "r")
 C = int(file.readline())
 
+    
 def package(index, weight_sum, need_sum):
     if index == N:
         return need_sum
     ret = cache[index]
     if ret != -1:
         return ret
-    print(need_sum)
+    
     add_version = 0
     not_add_version = 0
     
