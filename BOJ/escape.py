@@ -5,76 +5,51 @@ T = int(sys.stdin.readline())
 dir_x = [-1, 0, 0, 1]
 dir_y = [0, -1, 1, 0]
 
-def bfs(prisoner, visited):
+def bfs(a, b):
+    visited = [[-1 for _ in range(W)] for _ in range(H)]
     queue = deque()
-    queue.append(prisoner)
-    x, y = prisoner
-    visited[x][y] = 0
-
+    queue.append([a, b])
+    visited[a][b] = 0
     while queue:
-        x, y = queue.popleft()
+        x, y= queue.popleft()
         for i in range(4):
             dx, dy = x + dir_x[i], y + dir_y[i]
-            if 0 <= dx < h and 0 <= dy < w:
+            if 0 <= dx < H and 0 <= dy < W:
                 if visited[dx][dy] == -1:
-                    value = matrix[dx][dy]
-                    if value == '$' or value == '.':
-                        visited[dx][dy] = visited[x][y]
-                        queue.append([dx, dy])
-                    elif value == '#':
+                    if matrix[dx][dy] == '#':
                         visited[dx][dy] = visited[x][y] + 1
                         queue.append([dx, dy])
+                    elif matrix[dx][dy] == '.':
+                        visited[dx][dy] = visited[x][y]
+                        queue.appendleft([dx, dy])
+    return visited
 
 for _ in range(T):
     h, w = map(int, sys.stdin.readline().split())
-    matrix = [list(sys.stdin.readline().strip()) for _ in range(h)]
-    prisoner = []
-    visited_1 = [[-2 for _ in range(w)] for _ in range(h)]
-    visited_2 = [[-2 for _ in range(w)] for _ in range(h)]
+    H, W = h + 2, w + 2
+
+    matrix = [['.' for _ in range(W)] for _ in range(H)]
+    prisoners = []
     for i in range(h):
+        tmp = sys.stdin.readline()
         for j in range(w):
-            value = matrix[i][j]
-            if value == '$':
-                prisoner.append([i, j])
-                visited_1[i][j] = -1
-                visited_2[i][j] = -1
-            elif value == '.':
-                visited_1[i][j] = -1
-                visited_2[i][j] = -1
-            elif value == '#':
-                visited_1[i][j] = -1
-                visited_2[i][j] = -1
+            if tmp[j] == '$':
+                prisoners.append([i + 1, j + 1])
+                matrix[i + 1][j + 1] = '.'
+            else:
+                matrix[i + 1][j + 1] = tmp[j]
 
-    bfs(prisoner[0], visited_1)
-    bfs(prisoner[1], visited_2)
+    a = (bfs(0, 0))
+    b = (bfs(prisoners[0][0], prisoners[0][1]))
+    c = (bfs(prisoners[1][0], prisoners[1][1]))
 
-    min_value = 987654321
+    min_count = 987654321
+    for i in range(H):
+        for j in range(W):
+            if a[i][j] != -1 and b[i][j] != -1 and c[i][j] != -1:
+                count = a[i][j] + b[i][j] + c[i][j]
+                if matrix[i][j] == '#':
+                    count -= 2
+                min_count = min(min_count, count)
+    print(min_count)
 
-    for value in visited_1:
-        print(value)
-    print("")
-    for value in visited_2:
-        print(value)
-    print("")
-
-    for i in range(h):
-        j = 0
-        value = visited_1[i][j] + visited_2[i][j]
-        if value >= 0:
-            min_value = min(min_value, value)
-        j = w - 1
-        value = visited_1[i][j] + visited_2[i][j]
-        if value >= 0:
-            min_value = min(min_value, value)
-
-    for j in range(w):
-        i = 0
-        value = visited_1[i][j] + visited_2[i][j]
-        if value >= 0:
-            min_value = min(min_value, value)
-        i = h - 1
-        value = visited_1[i][j] + visited_2[i][j]
-        if value >= 0:
-            min_value = min(min_value, value)
-
-    print(min_value // 2)
