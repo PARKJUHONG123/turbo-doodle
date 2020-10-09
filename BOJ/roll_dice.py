@@ -13,14 +13,14 @@ floor_index = 5
 right_index = 4
 def print_dice():
     if matrix[x][y] == 0:
-        matrix[x][y] = copy.deepcopy(dice[floor_index])
+        matrix[x][y] = copy_.deepcopy(dice[floor_index])
         if floor_index + 3 > 5:
             print(dice[floor_index - 3])
         else:
             print(dice[floor_index + 3])
 
     else:
-        dice[floor_index] = copy.deepcopy(matrix[x][y])
+        dice[floor_index] = copy_.deepcopy(matrix[x][y])
         if floor_index + 3 > 5:
             print(dice[floor_index - 3])
         else:

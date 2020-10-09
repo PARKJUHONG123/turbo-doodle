@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 dir_x = [1, 0, -1, 0]
 dir_y = [0, -1, 0, 1]
 
