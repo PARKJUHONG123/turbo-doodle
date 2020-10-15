@@ -1,23 +1,14 @@
 import sys
+from bisect import bisect_left
 
 N = int(sys.stdin.readline())
+arr = list(map(int, sys.stdin.readline().split()))
+stack = [0]
 
-A = list(map(int, sys.stdin.readline().split()))
-dp = [1 for _ in range(N)]
-arr = [[i] for i in A]
+for value in arr:
+    if stack[-1] < value:
+        stack.append(value)
+    else:
+        stack[bisect_left(stack, value)] = value
 
-for i in range(N):
-    for j in range(i):
-        if A[i] > A[j]:
-            if dp[j] + 1 > dp[i]:
-                arr[i] = arr[j] + [A[i]]
-                dp[i] = dp[j] + 1
-length = 0
-flag = 0
-for i in range(N):
-    if length < dp[i]:
-        flag = i
-        length = dp[i]
-
-print(length)
-print(*arr[flag])
+print(len(stack) - 1)
