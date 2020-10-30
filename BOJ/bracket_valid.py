@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 arr = sys.stdin.readline().split()
 
 input_list = list()
