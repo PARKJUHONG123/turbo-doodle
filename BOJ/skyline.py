@@ -1,26 +1,41 @@
-import heapq
 import sys
-a_heap, b_heap = [], []
+import heapq
 
 N = int(sys.stdin.readline().strip())
-for _ in range(N):
-    a, h, b = map(int, sys.stdin.readline().split())
-    if a_heap:
-        while a_heap:
-            value = heapq.heappop(a_heap)
-            heapq.heappush(b_heap, value)
-        heapq.heappush(b_heap, (a, h))
-        heapq.heappush(b_heap, (b, 0))
+pair = [[[0, 0], 0] for _ in range(N)]
+pair_dict = dict()
+pair_set = set()
 
-    else:
-        if b_heap:
-            while b_heap:
-                value = heapq.heappop(b_heap)
-                print(value[0])
-                heapq.heappush(a_heap, value)
-        else:
-            heapq.heappush(a_heap, (a, h))
-            heapq.heappush(a_heap, (b, 0))
+for i in range(N):
+    left, height, right = map(int, sys.stdin.readline().split())
+    pair[i][0][0], pair[i][0][1] = left, right
+    pair[i][1] = height
+    pair_set.add(left)
+    pair_set.add(right)
+pair.sort()
+rx = list(pair_set)
+rx.sort()
 
-print(a_heap)
-print(b_heap)
+m = len(rx)
+x = dict()
+for i in range(len(rx)):
+    x[rx[i]] = i
+
+now, j = 0, 0
+h = []
+
+for i in range(m):
+    while (j < N and x[pair[j][0][0]] <= i):
+        heapq.heappush(h, (-pair[j][1], x[pair[j][0][1]]))
+        j += 1
+    next = 0
+    while len(h):
+        value = heapq.heappop(h)
+        if i < value[1]:
+            next = -value[0]
+            heapq.heappush(h, value)
+            break
+
+    if now != next:
+        now = next
+        print(rx[i], now, end = ' ')
